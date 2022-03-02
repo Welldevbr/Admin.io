@@ -1,21 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
-
-  appearance: none;
-  text-decoration: none;
-  list-style: none;
-
-  box-sizing: border-box;
-}
-
 /*---------- root variáveis -----------*/
-root {
-  /*--------- Colors ---------*/
+:root {
+  /*---------- Colors -----------*/
   --color-promary: #0077b6;
   --color-danger: #ff7782;
   --color-danger-alt: #023e8a;
@@ -30,19 +17,34 @@ root {
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
 
-  /*--------- Border Radius ----------*/
+  /*---- Borders Radius ----*/
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
   --border-radius-2: 0.8rem;
   --border-radius-3: 1.2rem;
 
-  /*-------- Paddings -------*/
+  /*------- Padding ------*/
   --card-padding: 1.8rem;
   --padding: 1.2rem;
 
-  /*-------- Shadow -------*/
+  /*---------- Shadow -----------*/
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+
+  appearance: none;
+  text-decoration: none;
+  list-style: none;
+
+  box-sizing: border-box;
+}
+
+/*------------------- Base ----------------*/
 
 img {
   display: block;
@@ -107,7 +109,97 @@ samll {
 p {
   color: var(--color-dark-variant);
 }
-/*------- toggle -----*/
+
+b {
+  color: var(--color-dark);
+}
+
+.primary {
+  color: var(--color-promary);
+}
+
+.danger {
+  color: var(--color-danger-alt);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.container {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+aside {
+  height: 100vh;
+}
+
+aside .top {
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+aside .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+aside .logo img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/*------- Sidebar -------*/
+
+aside .sidebar {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 3rem;
+}
+aside h3 {
+  font-weight: 500;
+}
+
+aside .sidebar a {
+  display: flex;
+  color: var(--color-info-dark);
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  margin-left: 2rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
+}
+
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+aside .sidebar a .message-count {
+  font-size: 1rem;
+  background: var(--color-danger);
+  padding: 0.88rem;
+  border-radius: var(--border-radius-1);
+}
+
+/*------- toggle -------*/
 
 .toggles {
   display: block;
