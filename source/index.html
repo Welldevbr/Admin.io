@@ -18,15 +18,17 @@
   </head>
   <body>
     <div class="container">
-      <aside>
+      <aside id="navbar">
         <div class="top">
           <div class="logo">
             <img src="/assets/logoalt.svg" alt="" />
             <h2>Finance<span class="primary">.io</span></h2>
           </div>
 
-          <div class="close" id="close-btn">
-            <span class="material-icons-sharp"> close </span>
+          <div class="toggles" id="toggle">
+            <div class="toggle one"></div>
+            <div class="toggle two"></div>
+            <div class="toggle three"></div>
           </div>
         </div>
 
@@ -114,6 +116,79 @@
           </a>
         </div>
       </aside>
+
+      <!------------ Aside end / Main start -------------->
+
+      <main>
+        <h1>Dashboard</h1>
+
+        <div class="data">
+          <input type="date" />
+        </div>
+
+        <div class="insights">
+          <div class="sales">
+            <span class="material-icons-sharp"> analytics </span>
+            <div class="midle">
+              <div class="left">
+                <h3>Total Sales</h3>
+                <h1>R$25,24</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>81%</p>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+          </div>
+          <!--------- Sales End / Expenses Start --------->
+
+          <div class="expenses">
+            <span class="material-icons-sharp"> bar_chart </span>
+            <div class="midle">
+              <div class="left">
+                <h3>Total Sales</h3>
+                <h1>R$14,16</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>62%</p>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+          </div>
+          <!--------- Expenses End / Income Start --------->
+
+          <div class="income">
+            <span class="material-icons-sharp"> stacked_line_chart </span>
+            <div class="midle">
+              <div class="left">
+                <h3>Total Sales</h3>
+                <h1>R$10,86</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>44%</p>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
+
+    <script src="/source/app.js"></script>
   </body>
 </html>

@@ -64,6 +64,7 @@ body {
   background: var(--color-background);
   user-select: none;
   overflow-x: hidden;
+  color: var(--color-dark);
 }
 
 a {
@@ -136,7 +137,6 @@ b {
 
 aside {
   height: 100vh;
-  background: var(--color-white);
 }
 
 aside .top {
@@ -150,7 +150,7 @@ aside .top {
 aside .logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.88rem;
 }
 
 aside .logo img {
@@ -161,7 +161,6 @@ aside .logo img {
 /*------- Sidebar -------*/
 
 aside .sidebar {
-  background: var(--color-white);
   display: flex;
   flex-direction: column;
   height: 86vh;
@@ -197,7 +196,7 @@ aside .sidebar a:last-child {
 aside .sidebar a .message-count {
   font-size: 0.75rem;
   background: var(--color-danger);
-  padding: 0.5rem;
+  padding: 0.15rem 0.5rem;
   border-radius: var(--border-radius-1);
   color: var(--color-white);
 }
@@ -217,6 +216,7 @@ aside .sidebar a.active::before {
 
 aside .sidebar a.active span {
   color: var(--color-promary);
+  margin-left: calc(1rem - 3px);
 }
 
 aside .sidebar a:hover {
@@ -233,19 +233,21 @@ aside .sidebar a:hover span {
   display: block;
   position: relative;
 
-  height: 1.5rem;
-  width: 1.75rem;
+  height: 1.25rem;
+  width: 1.5rem;
+
+  display: none;
 }
 
 .toggle {
   display: block;
   position: absolute;
 
-  height: 0.25rem;
+  height: 0.19rem;
   width: 100%;
 
   border-radius: 2rem;
-  background: #0077b6;
+  background: var(--color-promary);
   transition: 0.3s ease-in-out;
 }
 
@@ -259,4 +261,28 @@ aside .sidebar a:hover span {
 
 .three {
   top: 1rem;
+}
+
+aside.show .one {
+  transform: rotate(-135deg);
+  top: 0.5rem;
+}
+
+aside.show .two {
+  opacity: 0;
+}
+
+aside.show .three {
+  transform: rotate(135deg);
+  top: 0.5rem;
+}
+
+/*------- Main ----------*/
+
+main {
+  margin-top: 1.5rem;
+}
+
+main {
+  display: inline-block;
 }
