@@ -96,7 +96,7 @@ samll {
   font-size: 0.75rem;
 }
 
-.prfile-photo {
+.profile-photo {
   width: 2.8rem;
   height: 2.8rem;
   clip-path: circle();
@@ -294,7 +294,7 @@ main {
   border-radius: var(--border-radius-1);
 }
 
-.data input[type=date] {
+.data input[type='date'] {
   background: transparent;
   color: var(--color-dark);
 }
@@ -342,6 +342,7 @@ main .insights > div .midle {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2.5rem;
 }
 
 main .insights h3 {
@@ -397,4 +398,61 @@ main .insights .progress .number {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+main .insights small {
+  margin-top: 1.3rem;
+  display: block;
+}
+
+/*--------------- Recent Orders ---------------*/
+
+main .recent-orders {
+  margin-top: 2rem;
+}
+
+main .recent-orders h2 {
+  margin-bottom: 0.8rem;
+}
+
+main .recent-orders table {
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
+
+  text-align: center;
+
+  width: 100%;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+
+  transition: all 300ms ease;
+}
+
+main .recent-orders table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 3rem;
+  border-bottom: 0.025rem solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td {
+  border: none;
+}
+
+main .recent-orders a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-promary);
+}
+
+/*--------------- Right Top ---------------*/
+
+.right .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
