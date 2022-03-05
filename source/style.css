@@ -3,7 +3,7 @@
 /*---------- root variáveis -----------*/
 :root {
   /*---------- Colors -----------*/
-  --color-promary: #0077b6;
+  --color-primary: #0077b6;
   --color-danger: #ff7782;
   --color-danger-alt: #023e8a;
   --color-sucess: #41f1b6;
@@ -97,8 +97,8 @@ samll {
 }
 
 .profile-photo {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3rem;
+  height: 3rem;
   clip-path: circle();
   overflow-x: hidden;
 }
@@ -116,15 +116,19 @@ b {
 }
 
 .primary {
-  color: var(--color-promary);
+  color: var(--color-primary);
 }
 
 .danger {
-  color: var(--color-danger-alt);
+  color: var(--color-danger);
 }
 
 .warning {
   color: var(--color-warning);
+}
+
+.sucess {
+  color: var(--color-sucess);
 }
 
 .container {
@@ -202,7 +206,7 @@ aside .sidebar a .message-count {
 
 aside .sidebar a.active {
   background: var(--color-light);
-  color: var(--color-promary);
+  color: var(--color-primary);
   margin-left: 0;
 }
 
@@ -210,16 +214,16 @@ aside .sidebar a.active::before {
   content: '';
   width: 6px;
   height: 100%;
-  background: var(--color-promary);
+  background: var(--color-primary);
 }
 
 aside .sidebar a.active span {
-  color: var(--color-promary);
+  color: var(--color-primary);
   margin-left: calc(1rem - 3px);
 }
 
 aside .sidebar a:hover {
-  color: var(--color-promary);
+  color: var(--color-primary);
 }
 
 aside .sidebar a:hover span {
@@ -246,7 +250,7 @@ aside .sidebar a:hover span {
   width: 100%;
 
   border-radius: 2rem;
-  background: var(--color-promary);
+  background: var(--color-primary);
   transition: 0.3s ease-in-out;
 }
 
@@ -364,7 +368,7 @@ main .insights svg {
 
 main .insights svg circle {
   fill: none;
-  stroke: var(--color-promary);
+  stroke: var(--color-primary);
   stroke-width: 14;
   stroke-linecap: round;
   transform: translate(5px, 5px);
@@ -373,18 +377,18 @@ main .insights svg circle {
 }
 
 main .insights .sales svg circle {
-  stroke-dasharray: 200;
+  stroke-dasharray: 180;
   stroke-dashoffset: -30;
 }
 
 main .insights .expenses svg circle {
-  stroke-dasharray: 80;
-  stroke-dashoffset: 20;
+  stroke-dasharray: 140;
+  stroke-dashoffset: -50;
 }
 
 main .insights .income svg circle {
-  stroke-dasharray: 110;
-  stroke-dashoffset: 35;
+  stroke-dasharray: 115;
+  stroke-dashoffset: -35;
 }
 
 main .insights .progress .number {
@@ -446,13 +450,82 @@ main .recent-orders a {
   text-align: center;
   display: block;
   margin: 1rem auto;
-  color: var(--color-promary);
+  color: var(--color-primary);
 }
 
 /*--------------- Right Top ---------------*/
 
+.right {
+  margin-top: 1.5rem;
+}
 .right .top {
   display: flex;
-  align-items: center;
+
+  justify-content: end;
+  gap: 2rem;
+}
+
+.right .top button {
+  display: none;
+}
+
+.right .theme-toggler {
+  background: var(--color-light);
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right .theme-toggler span.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-1);
+}
+
+.right .top .profile {
+  display: flex;
+  gap: 2rem;
+  text-align: right;
+}
+
+/*--------------- Recent updates ---------------*/
+
+.right .recent-updates {
+  margin-top: 1rem;
+}
+
+.right .recent-updates h2 {
+  margin-bottom: 0.8rem;
+}
+
+.right .recent-updates .updates {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.right .recent-updates .updates:hover {
+  box-shadow: none;
+}
+
+.right .recent-updates .updates .update {
+  display: grid;
+  grid-template-columns: 2.6rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
