@@ -6,7 +6,7 @@
   --color-primary: #0077b6;
   --color-danger: #ff7782;
   --color-danger-alt: #023e8a;
-  --color-sucess: #41f1b6;
+  --color-sucess: #3bd4a1;
   --color-warning: #ffbb55;
   --color-white: #fff;
   --color-info-dark: #7d8da1;
@@ -108,7 +108,7 @@ samll {
 }
 
 p {
-  color: var(--color-dark-variant);
+  color: var(--color-dark-variadangert);
 }
 
 b {
@@ -238,8 +238,6 @@ aside .sidebar a:hover span {
 
   height: 1.25rem;
   width: 1.5rem;
-
-  display: none;
 }
 
 .toggle {
@@ -419,6 +417,10 @@ main .recent-orders h2 {
   margin-bottom: 0.8rem;
 }
 
+main .recent-orders .show-all {
+  margin-top: 2rem;
+}
+
 main .recent-orders table {
   background: var(--color-white);
   box-shadow: var(--box-shadow);
@@ -528,4 +530,141 @@ main .recent-orders a {
   grid-template-columns: 2.6rem auto;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+/*------- Sales Analytics -------*/
+
+.right .sales-analytics {
+  margin-top: 2rem;
+}
+
+.right .sales-analytics h2 {
+  margin-bottom: 1rem;
+}
+.right .sales-analytics .item {
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
+
+  padding: 1.4rem var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  transition: all 300ms ease;
+}
+
+.right .sales-analytics .item:hover {
+  box-shadow: none;
+}
+
+.right .sales-analytics .item .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  width: 100%;
+}
+
+.right .sales-analytics .item .icone {
+  padding: 0.6rem;
+  color: var(--color-white);
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+}
+
+.right .sales-analytics .item.offline .icone {
+  background: var(--color-danger);
+}
+
+.right .sales-analytics .item.customers .icone {
+  background: var(--color-sucess);
+}
+
+.right .sales-analytics .add-product {
+  background: none;
+  border: 0.15rem dashed var(--color-primary);
+  color: var(--color-primary);
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 300ms ease;
+}
+
+.right .sales-analytics .add-product:hover {
+  background: var(--color-primary);
+  border: 0.15rem solid var(--color-background);
+  color: var(--color-white);
+}
+
+.right .sales-analytics .add-product div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.right .sales-analytics .add-product div h3 {
+  font-weight: 600;
+}
+
+/*--------- Media Queries ----------*/
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+
+  aside .logo {
+    display: none;
+  }
+
+  aside .logo h2 {
+    display: none;
+  }
+
+  aside .sidebar h3 {
+    display: none;
+  }
+
+  aside .sidebar a {
+    width: 5.6rem;
+  }
+
+  aside .sidebar a:last-child {
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  main .insights > div:hover {
+    margin-top: 1rem;
+  }
+
+  main .recent-orders {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 8.8rem;
+  }
+
+  main .recent-orders table {
+    width: 83vw;
+  }
+
+  main table thead tr th:last-child,
+  main table thead tr th:first-child {
+    display: none;
+  }
 }
