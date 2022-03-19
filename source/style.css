@@ -37,7 +37,7 @@
   --color-white: #202528;
   --color-dark: #edeffd;
   --color-dark-variant: #a3bdcc;
-  --color-light: rgba(0, 0, 0 0.4);
+  --color-light: rgba(0, 0, 0 4);
   --box-shadow: 0 2rem 3rem var(var(--color-light));
 }
 
