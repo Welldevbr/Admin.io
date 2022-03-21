@@ -320,6 +320,14 @@ main .recent-updates .title {
   margin-left: 0.25rem;
 }
 
+main .recent-updates .show-all {
+  position: absolute;
+  left: 40%;
+
+  margin-top: 2rem;
+  color: var(--color-primary);
+}
+
 main .recent-updates .updates {
   display: grid;
   gap: 2rem;
@@ -335,7 +343,7 @@ main .recent-updates .updates .update {
   display: grid;
   grid-template-columns: 2.6rem auto;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   transition: all 300ms ease;
 }
@@ -445,15 +453,9 @@ main .recent-updates .updates .update .profile-photo {
     padding: 0 1rem;
   }
 
-  main .recent-orders {
-    position: relative;
-    margin: 3rem 0 0 0;
-    width: 100%;
-  }
-
-  main .recent-orders table {
-    width: 100%;
-    margin: 0;
+  main .recent-updates .updates .update:hover {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   .right {
