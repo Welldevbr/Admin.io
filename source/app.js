@@ -15,7 +15,3 @@ closeBtn.addEventListener('click', () => {
 themeToggler.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme-variables')
 })
-
-sideBarSelect.addEventListener('click', () => {
-  sideBarSelect.querySelector('a:nth-child(1)').classlist.toggle('active')
-  sideBarSelect.querySelector('a:nth-child(2)').classlist.toggle('active')
