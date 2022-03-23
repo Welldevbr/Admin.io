@@ -362,6 +362,7 @@ main .recent-updates .updates .update {
 
 main .recent-updates .updates .update:hover {
   box-shadow: none;
+  border: 0.02rem solid var(--color-primary);
 }
 
 main .recent-updates .updates .update .profile-photo {
